@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <p class="modal-title">{{ video.video.snippet.title | titlecase }}</p>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body text-center">
+  <iframe [id]="video.id" [src]="video.url" style="width: 100%; height: 20rem;" frameborder="0" webkitallowfullscreen
+        mozallowfullscreen allowfullscreen>
+      </iframe>
+  <!-- <youtube-player [videoId]="video.video.id.videoId" (ready)="savePlayer($event)" [playerVars]="playerVars">
+  </youtube-player> -->
+</div>
